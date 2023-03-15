@@ -1,31 +1,28 @@
+import java.util.Scanner;
+
 public class BaseEngine {
-    private String brand;
-    private double hp;
-    private String volumeEngine;
+    private String type;
 
     public BaseEngine() {
-        brand = "no brand";
-        hp = 0;
-        volumeEngine = "no info";
+        type = "no type";
     }
-    public BaseEngine(String br, double HP, String vol) {
-        brand = br;
-        hp = HP;
-        volumeEngine = vol;
+    public BaseEngine(String t) {
+        type = t;
     }
     public String getBrand() {
-        return brand;
-    }
-    public double getHP() {
-        return hp;
-    }
-    public String getVolumeEngine() {
-        return volumeEngine;
-    }
-    public String toString() {
-        String res;
-        res = " Brand: " + brand + "\n hp: " + hp + "\n Engine volume: " + volumeEngine;
-        return res;
+        return type;
     }
 
+    public String show() {
+        String res;
+        res = "\n Base info: " + "\n Type: " + type;
+        return res;
+    }
+    
+    Scanner in = new Scanner(System.in);
+    public void input() {
+        System.out.print(" Enter type or name of engine: ");
+        type = in.nextLine();
+        System.out.println("");
+    }
 }
