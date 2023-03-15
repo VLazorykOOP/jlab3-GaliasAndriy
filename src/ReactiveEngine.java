@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class ReactiveEngine extends BaseEngine{
     private String bypassRatio;
     private String thrust;
+    private Scanner in = new Scanner(System.in);
 
     public ReactiveEngine() {
         super();
@@ -24,13 +25,12 @@ public class ReactiveEngine extends BaseEngine{
     }
 
     public String show() {
-        super.show();
-        String res = "\n Bypass ratio: " + bypassRatio + "\n Thrust: " + thrust;
+        String res = super.show() + "\n Bypass ratio: " + bypassRatio + "\n Thrust: " + thrust;
         return res;
     }
 
-    Scanner in = new Scanner(System.in);
     public void input() {
+        super.input();
         System.out.println("\n Fill next data about a reactive/jet engine:");
         System.out.print("  Enter bypass ratio: ");
         bypassRatio = in.nextLine();

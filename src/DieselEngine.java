@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class DieselEngine extends InternalCombustionEngine{
     private String specificFuelConsumption;
     private int numberOfInjectors;
+    private Scanner in = new Scanner(System.in);
 
     public DieselEngine() {
         super();
@@ -24,14 +25,13 @@ public class DieselEngine extends InternalCombustionEngine{
     }
 
     public String show() {
-        super.show();
-        String res = "\n Specific fuel consumtion: " + specificFuelConsumption + 
+        String res = super.show() + "\n Specific fuel consumtion: " + specificFuelConsumption +
         "\n Number of injectors: " + numberOfInjectors;
         return res;
     }
 
-    Scanner in = new Scanner(System.in);
     public void input() {
+        super.input();
         System.out.println("\n Fill next data about an diesel engine:");
         System.out.print(" Enter specific fuel consumption: ");
         specificFuelConsumption = in.nextLine();

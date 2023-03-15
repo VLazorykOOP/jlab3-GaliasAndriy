@@ -6,6 +6,7 @@ public class InternalCombustionEngine extends BaseEngine{
     private double hp;
     private double torque;
     private double volumeEngine;
+    private Scanner in = new Scanner(System.in);
 
     public InternalCombustionEngine() {
         super();
@@ -15,14 +16,14 @@ public class InternalCombustionEngine extends BaseEngine{
         torque = 0;
     }
 
-    public InternalCombustionEngine(String type, String fuelType, 
-    int cylinderCount, double hp, double torque, double volumeEngine) {
+    public InternalCombustionEngine(String type, String ft,
+    int cc, double HP, double tor, double ve) {
         super(type);
-        this.fuelType = fuelType;
-        this.cylinderCount = cylinderCount;
-        this.hp = hp;
-        this.torque = torque;
-        this.volumeEngine = volumeEngine;
+        fuelType = ft;
+        cylinderCount = cc;
+        hp = HP;
+        torque = tor;
+        volumeEngine = ve;
     }
 
     public String getFuelType() {
@@ -42,14 +43,13 @@ public class InternalCombustionEngine extends BaseEngine{
     }
 
     public String show() {
-        super.show();
-        String res = "\n Fuel type: " + fuelType + "\n Cylinder count: " + cylinderCount + 
+        String res = super.show() + "\n Fuel type: " + fuelType + "\n Cylinder count: " + cylinderCount +
         "\n Horse powers:" + hp + "\n Torque: " + torque + "\n Volume engine: " + volumeEngine;
         return res;
     }
 
-    Scanner in = new Scanner(System.in);
     public void input() {
+        super.input();
         System.out.println("\n Fill next data about an internal combustion engine:");
         boolean isValid = false;
         do {

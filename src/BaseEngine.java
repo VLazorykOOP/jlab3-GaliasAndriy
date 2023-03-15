@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class BaseEngine {
     private String type;
+    private Scanner in = new Scanner(System.in);
 
     public BaseEngine() {
         type = "no type";
@@ -18,11 +19,9 @@ public class BaseEngine {
         res = "\n Base info: " + "\n Type: " + type;
         return res;
     }
-    
-    Scanner in = new Scanner(System.in);
+
     public void input() {
         System.out.print(" Enter type or name of engine: ");
         type = in.nextLine();
-        System.out.println("");
     }
 }
