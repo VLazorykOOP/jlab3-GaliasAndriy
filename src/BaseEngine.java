@@ -10,13 +10,13 @@ public class BaseEngine {
     public BaseEngine(String t) {
         type = t;
     }
-    public String getBrand() {
+    public String getType() {
         return type;
     }
 
     public String show() {
         String res;
-        res = "\n Base info: " + "\n Type: " + type;
+        res = " Base info: " + "\n Type: " + type;
         return res;
     }
 

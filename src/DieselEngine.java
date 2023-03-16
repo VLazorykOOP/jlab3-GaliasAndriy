@@ -10,7 +10,7 @@ public class DieselEngine extends InternalCombustionEngine{
         specificFuelConsumption = "no info";
     }
 
-    public DieselEngine(String type, String fuelType, int cylinderCount, double hp, 
+    public DieselEngine(String type, String fuelType, int cylinderCount, double hp,
     double torque, double volumeEngine, String specificFuelConsumption, int numberOfInjectors) {
         super(type, fuelType, cylinderCount, hp, torque, volumeEngine);
         this.specificFuelConsumption = specificFuelConsumption;
@@ -31,7 +31,7 @@ public class DieselEngine extends InternalCombustionEngine{
     }
 
     public void input() {
-        super.input();
+        super.inputDieselEngine();
         System.out.println("\n Fill next data about an diesel engine:");
         System.out.print(" Enter specific fuel consumption: ");
         specificFuelConsumption = in.nextLine();
