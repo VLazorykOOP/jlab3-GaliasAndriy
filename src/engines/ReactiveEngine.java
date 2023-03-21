@@ -17,11 +17,18 @@ public class ReactiveEngine extends BaseEngine{
         this.thrust = thrust;
     }
 
-    public String getBypassRation() {
+    public String getBypassRatio() {
         return bypassRatio;
     }
+    public void setBypassRatio(String bypassRatio) {
+        this.bypassRatio = bypassRatio;
+    }
+
     public String getThrust() {
         return thrust;
+    }
+    public void setThrust(String thrust) {
+        this.thrust = thrust;
     }
 
     public String show() {
@@ -29,12 +36,12 @@ public class ReactiveEngine extends BaseEngine{
         return res;
     }
 
-    public void input() {
-        super.input();
-        System.out.println("\n Fill next data about a reactive/jet engine:");
-        System.out.print("  Enter bypass ratio: ");
-        bypassRatio = in.nextLine();
-        System.out.print("  Enter thrust: ");
-        thrust = in.nextLine();
-    }
+    // public void input() {
+    //     super.input();
+    //     System.out.println("\n Fill next data about a reactive/jet engine:");
+    //     System.out.print("  Enter bypass ratio: ");
+    //     bypassRatio = in.nextLine();
+    //     System.out.print("  Enter thrust: ");
+    //     thrust = in.nextLine();
+    // }
 }

@@ -1,5 +1,5 @@
 package interfaces;
 
-interface Norm {
-    public double calculateNorm();
+public interface Norm {
+    double calculateNorm();
 }
