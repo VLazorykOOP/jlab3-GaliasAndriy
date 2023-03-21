@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class BaseEngine {
     private String title;
-    //private Scanner in = new Scanner(System.in);
 
     public BaseEngine() {
         title = "no type";

@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class DieselEngine extends InternalCombustionEngine{
     private int numberOfInjectors;
-    private Scanner in = new Scanner(System.in);
 
     public DieselEngine() {
         super();
@@ -26,15 +23,4 @@ public class DieselEngine extends InternalCombustionEngine{
         String res = super.show() + "\n Number of injectors: " + numberOfInjectors;
         return res;
     } 
-
-    // public void input() {
-    //     super.inputDieselEngine();
-    //     System.out.println("\n Fill additional data about a diesel engine:");
-    //     System.out.print(" Enter specific fuel consumption: ");
-    //     specificFuelConsumption = in.nextLine();
-    //     do {
-    //         System.out.print(" Enter number of injectors (1 <= n <= 32): ");
-    //         numberOfInjectors = in.nextInt();
-    //     } while(numberOfInjectors <= 1 && numberOfInjectors >= 32);        
-    // }
 }

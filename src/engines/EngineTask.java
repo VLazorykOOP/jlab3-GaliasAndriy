@@ -177,5 +177,6 @@ public class EngineTask {
             System.out.println(engines[i].show());
         }
         System.out.println();
+        in.close();
     }
 }
